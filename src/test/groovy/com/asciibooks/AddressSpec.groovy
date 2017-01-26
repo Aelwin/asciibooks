@@ -15,8 +15,12 @@ class AddressSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+
+    void "toString() does not contain the string null"() {
+	    given: "An address with all null properties"
+	    	Address address = new Address()	    	
+
+	    expect: "The toString to not contain the word null"
+	    	address.toString().contains("null") == false
+	}
 }

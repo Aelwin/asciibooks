@@ -23,6 +23,6 @@ class Address {
     }
 
     String toString() {
-    	(street ?: '') + (street2 ?: '') + (' ' + city ?: ) + (' ' + state ?: '') + (zipCode ? ", $zipCode" :  '')
+    	(street ?: '') + (street2 ?: '') + ' ' + (city ?: '') + ' ' + (state ?: '') + (zipCode ? ", $zipCode" :  '')        
     }
 }

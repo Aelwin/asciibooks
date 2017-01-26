@@ -5,7 +5,7 @@ class Author {
     String name
 	String penName
 	Boolean active = true
-	Address Address
+	Address address
 	Date lastUpdated
 	Date dateCreated
 
@@ -13,9 +13,14 @@ class Author {
 
     static constraints = {
     	penName nullable: true
+        address nullable: true
     }
 
     String getDisplayName() {
     	penName ?: name
     }
+
+    /*def getBooks() {
+        Book.findAllByAuthor(this)
+    }*/
 }
